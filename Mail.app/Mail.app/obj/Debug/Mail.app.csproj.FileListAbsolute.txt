@@ -1,0 +1,34 @@
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\bin\Debug\Mail.app.exe
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\bin\Debug\Mail.app.exe.config
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Controls\RichTextEditor.g.cs
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\MainWindow.g.cs
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\App.g.cs
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app_MarkupCompile.cache
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app_MarkupCompile.lref
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Controls\RichTextEditor.baml
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\MainWindow.baml
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.g.resources
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.Properties.Resources.resources
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.csproj.GenerateResource.Cache
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.exe
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.pdb
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\bin\Debug\Mail.app.pdb
+C:\Users\Qsslp147\Documents\Visual Studio 2013\Projects\Mail.app\Mail.app\obj\Debug\Mail.app.csprojResolveAssemblyReference.cache
+E:\Mail.app\Mail.app\Mail.app\bin\Debug\Mail.app.exe
+E:\Mail.app\Mail.app\Mail.app\bin\Debug\Mail.app.exe.config
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Controls\RichTextEditor.g.cs
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\MainWindow.g.cs
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\App.g.cs
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app_MarkupCompile.cache
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app_MarkupCompile.lref
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Controls\RichTextEditor.baml
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\MainWindow.baml
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.g.resources
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.Properties.Resources.resources
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.csproj.GenerateResource.Cache
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.exe
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.pdb
+E:\Mail.app\Mail.app\Mail.app\bin\Debug\Mail.app.pdb
+E:\Mail.app\Mail.app\Mail.app\obj\Debug\Mail.app.csprojResolveAssemblyReference.cache

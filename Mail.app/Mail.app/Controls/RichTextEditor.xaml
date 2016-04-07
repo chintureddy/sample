@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="Mail.app.Controls.RichTextEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:asis="clr-namespace:Mail.app.AttachedPropertis"
+             x:Name="uxRichTextEditor"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+      
+    </UserControl.Resources>
+    
+    <Grid>
+
+        <!-- Set the styles for the tool bar. -->
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}" x:Key="formatTextStyle">
+                <Setter Property="FontFamily" Value="Palatino Linotype"></Setter>
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="FontSize" Value ="14"></Setter>
+                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Button}" x:Key="formatImageStyle">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="CommandTarget" Value="{Binding ElementName=mainRTB}"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Border BorderBrush="#3276b1" BorderThickness="1,1,1,0">
+        <DockPanel Name="mainPanel" Background="AliceBlue">
+          
+            <!-- This tool bar contains all the editing buttons. -->
+            <ToolBar Height="30" DockPanel.Dock="Top" ToolBarTray.IsLocked="True" >
+              
+                <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Cut" ToolTip="Cut">
+                    <Image Source="Images\editcut.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Copy" ToolTip="Copy">
+                    <Image Source="Images\EditCopy.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Paste" ToolTip="Paste">
+                    <Image Source="Images\EditPaste.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Undo" ToolTip="Undo">
+                    <Image Source="Images\EditUndo.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="ApplicationCommands.Redo" ToolTip="Redo">
+                    <Image Source="Images\EditRedo.png"></Image>
+                </Button>
+
+                <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                    <TextBlock FontWeight="Bold">B</TextBlock>
+                </Button>
+                <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                    <TextBlock FontStyle="Italic" FontWeight="Bold">I</TextBlock>
+                </Button>
+                <Button Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                    <TextBlock TextDecorations="Underline" FontWeight="Bold">U</TextBlock>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
+                    <Image Source="Images\CharacterGrowFont.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
+                    <Image Source="Images\CharacterShrinkFont.png"></Image>
+                </Button>
+
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="Bullets">
+                    <Image Source="Images\ListBullets.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="Numbering">
+                    <Image Source="Images/ListNumbering.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="Align Left">
+                    <Image Source="Images\ParagraphLeftJustify.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="Align Center">
+                    <Image Source="Images\ParagraphCenterJustify.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="Align Right">
+                    <Image Source="Images\ParagraphRightJustify.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="Align Justify">
+                    <Image Source="Images\ParagraphFullJustify.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
+                    <Image Source="Images\ParagraphIncreaseIndentation.png"></Image>
+                </Button>
+                <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
+                    <Image Source="Images\ParagraphDecreaseIndentation.png"></Image>
+                </Button>
+            </ToolBar>
+
+            <StackPanel >
+                    <RichTextBox Name="mainRTB" AcceptsTab="True"  Height="200" BorderBrush="White" BorderThickness="0,1,0,0"
+                             asis:RichTextboxAssistant.BoundDocument="{Binding Path=Text, ElementName=uxRichTextEditor}"
+                             VerticalScrollBarVisibility="Auto" >
+                        <RichTextBox.Resources>
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin" Value="0"/>
+                            </Style>
+                        </RichTextBox.Resources>
+                    </RichTextBox>
+                <!--<TextBox Text="{Binding Path=Text, ElementName=uxRichTextEditor}" Height="25" />-->
+            </StackPanel>
+           
+
+        </DockPanel>
+        </Border>
+    </Grid>
+</UserControl>
