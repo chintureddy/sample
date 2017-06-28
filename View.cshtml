@@ -1,0 +1,111 @@
+﻿<script>
+    @*function certificateData(bool) {
+        $.ajax({
+            url: '@Url.Action("back", "Default")',
+            data: { 'contents': "yes"},
+            type: "POST",
+            success: function (data)
+            {
+                $(".certificateDetails_content_container").html(data);
+                var value="@Session["CheckPartialViewRedirect"]";
+                if (value == "false")
+                {
+                    $('.certificateDetails_content_container').empty();
+                }
+            }
+        });
+    }*@
+    function cancelRow(id) {
+        $.ajax({
+            url: '@Url.Action("back", "Default")',
+            data: { 'contents': id },
+            type: "POST",
+            success: function (data) {
+                    
+                $(".certificateDetails_content_container").html(data);
+              
+            }
+                   
+                
+        });
+    }
+    function Edit(id) {
+        $.ajax({
+            url: '@Url.Action("back", "Default")',
+            data: { 'contents': "Edit_"+id },
+            type: "POST",
+            success: function (data) {
+
+                $(".certificateDetails_content_container").html(data);
+
+            }
+
+
+        });
+    }
+</script>
+<div id="para">
+    <p onclick="pclick();">Click to Add Signature</p>
+</div>
+
+<div class="certificateDetails_content_container">
+    <div>
+        @{
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>UserId</th>
+                        <th>UserName</th>
+                        <th>Notebody</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                        {
+                        for (int i = 0; i <= Model.listusedils.Count - 1; i++)
+                        {
+
+                            var items = @Model.listusedils[i];
+                            var cnt = i + 1;
+                            <tr class="even gradeX" id="@i">
+                                <td id="clearClm">
+
+                                    <button class="btn" id="@cnt" onclick="cancelRow(@cnt)">
+                                        <span style="text-align:center">
+                                            <a><i class="remove glyphicon glyphicon-remove-sign glyphicon-white"></i></a>
+                                        </span>
+                                    </button>
+                                </td>
+                                <td id="editClm">
+                                    <p id="@cnt" onclick="Edit(@cnt);">Edit comments</p>
+                                </td>
+                                <td>
+                                    <input type="text" value="@items.UserID" />
+                                </td>
+                                <td>
+                                    <input type="text" value="@items.UserName" />
+                                </td>
+                                <td>
+                                    <input type="text" value="@items.NoteBody" />
+                                </td>
+                                <td>
+                                    <img src="~/Images/save.png" height="42" width="42" />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>
+
+
+<div id="txtdiv">
+    <input id="txt" type="text" />
+    <input type="button" onclick="certificateData();" value="clickhere" />
+</div>
+

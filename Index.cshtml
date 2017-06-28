@@ -1,0 +1,69 @@
+﻿@model WebApplication10.Controllers.listUserdetails
+@{
+    ViewBag.Title = "Index";
+    var data = @Model.listusedils.FirstOrDefault();
+}
+
+<h2>Index</h2>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txtdiv").hide();
+    });
+    function certificateData() {
+        var val = $("#txt").val();
+        $.ajax({
+            url: '@Url.Action("back", "Default")',
+            data: { 'contents': val },
+            type: "POST",
+            success: function (data) {
+                $(".certificateDetails_content_container").html(data);
+            }
+        });
+    }
+    function pclick()
+    {
+        $("#txtdiv").show();
+    }
+</script>
+@*<div>
+    <p onclick="pclick();">Click to Add Signature</p>
+</div>
+@if (data.Edit == false)
+{ 
+<div id="txtdiv">
+    <input id="txt" type="text" />
+    <input type="button" onclick="certificateData();" value="clickhere"/>
+</div>
+}
+else
+{
+    <div >
+        <input id="txt" type="text" value="@data.NoteBody"/>
+        <input type="button" onclick="certificateData();" value="clickhere" />
+    </div>
+}*@
+<div>
+
+</div>
+<div class="certificateDetails_content_container">
+    <div>
+        @{
+           
+            Html.RenderPartial("View", Model);
+            
+         }
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
